@@ -17,8 +17,8 @@ h4all.forEach(function (elem) {
   });
   elem.addEventListener("mouseleave", function () {
     crsr.style.scale = 1;
-    crsr.style.border = "0px solid #95C11E";
-    crsr.style.backgroundColor = "#95C11E";
+    crsr.style.border = "0px solid #8544C3";
+    crsr.style.backgroundColor = "#8544C3";
   });
 });
 
@@ -40,7 +40,7 @@ gsap.to("#main",{
     scrollTrigger:{
         trigger:"#main",
         scroller:"body",
-        markers:true,
+        /* markers:true, */
         start:"top -25%",
         end:"top -70%",
         scrub:2
