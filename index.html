@@ -6,7 +6,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<link
+href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+rel="stylesheet"
+/>    
+<link rel="stylesheet" href="style.css">
     <title>Arena-Gaming Center</title>
 </head>
 <body>
@@ -20,12 +24,34 @@
     </div>
     <div id="cursor"></div>
     <div id="cursor-blur"></div>
-    <video autoplay loop muted src="venueVideo.mp4"></video>
+    <video id="autoplayVideo" muted loop playsinline>
+        <source src="venueVideo.mp4" type="video/mp4">
+    </video>
+    
+    <script>
+        // Get the video element
+        var video = document.getElementById("autoplayVideo");
+    
+        // Play the video when the page is loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            video.play();
+        });
+    
+        // Mute the video on user interaction (click)
+        document.addEventListener("click", function() {
+            video.muted = false;
+        });
+    </script>
+    
+      
     <div id="main">
         <div id="page1">
             <h1>EAT. DRINK. PLAY.</h1>
             <h2>WELCOME TO THE ARENA!</h2>
             <p>ARENA, is a multipurpose arcade facility located in Delhi, India. Passionate about technology, player development and making arcade fun and accesible to everyone.
+            <div id="arrow">
+                <i class="ri-arrow-down-line"></i>
+            </div>
         </div>
         <div id="page2">
             <div id="scroller">
@@ -74,9 +100,9 @@
                 </div>
             </div>
             <div id="purple-div">
-                <img src="dots.png" alt="">
+                <img src="dots-left.png" alt="">
                 <h4>SIGN UP FOR THE ARENA NEW AND SPECIAL OFFERS STRAIGHT TO YOUR INBOX</h4>
-                <img src="dots.png" alt="">
+                <img src="dots-right.png" alt="">
             </div>
         </div>
         <div id="page3">
@@ -130,6 +156,9 @@
             GET DIRECTIONS <br />
           </h4>
         </div>
+        <div id="f5"><h3>WANT A SITE<br />
+            LIKE THIS,<br />
+            <a href="https://www.linkedin.com/in/vanshika-tanwar-75b897297/">CONTACT</a></h3></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
